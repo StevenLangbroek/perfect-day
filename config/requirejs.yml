@@ -1,0 +1,6 @@
+modules:
+  - name: 'main'
+paths:
+  marionette: "backbone.marionette"
+  handlebars: "handlebars-runtime"
+  utils: "lib/utilities"
