@@ -8,10 +8,7 @@ define (require) ->
 
 	class HeaderController extends ApplicationController
 		initialize: (options) ->
-
-			headerView = @_getHeaderView()
-
-			@show headerView
+			@show(@_getHeaderView())
 
 		_getHeaderView: ->
 			new HeaderView()

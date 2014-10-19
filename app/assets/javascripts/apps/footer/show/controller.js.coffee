@@ -8,12 +8,10 @@ define (require) ->
 
 	class FooterController extends ApplicationController
 		initialize: (options) ->
-			new Users().fetch().done(_.bind(@listUsers, @))
+			@listUsers()
 
-		listUsers: (users) =>
-			footerView = @_getFooterView(users)
+		listUsers: ->
+			@show(@_getFooterView())
 
-			@show(footerView)
-
-		_getFooterView: (users) ->
-			new FooterView(collection: users)
+		_getFooterView: ->
+			new FooterView()
